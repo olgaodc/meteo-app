@@ -1,17 +1,25 @@
 import AsyncSelect from "react-select/async";
 import styles from "./styles.module.scss";
+import { customStyles } from "./consts";
 
-const SearchableSelect = ({ loadOptions, onChange, selectedOption }) => {
+const SearchableSelect = ({
+  defaultOptions,
+  loadOptions,
+  onChange,
+  selectedOption,
+}) => {
   return (
     <div className={styles.selectWrapper}>
       <AsyncSelect
-        placeholder="Search"
+        placeholder="Search city"
         isClearable
+        default
+        defaultOptions={defaultOptions}
         loadOptions={loadOptions}
         onChange={onChange}
         value={selectedOption}
         loadingMessage={() => "Loading..."}
-        noOptionsMessage={() => "No results"}
+        styles={customStyles}
       />
     </div>
   );

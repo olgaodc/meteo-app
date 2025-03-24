@@ -12,7 +12,8 @@ export const getCities = async () => {
 export const getTopCities = async () => {
   try {
     const response = await ApiService.get("/cities/top");
-    return response.data;
+    const { topCities } = response.data;
+    return topCities;
   } catch (error) {
     console.error("Error fetching top cities:", error);
   }

@@ -6,7 +6,7 @@ import { useCreateLog } from "./use-city-log";
 const useCitySelection = () => {
   const [selectedCity, setSelectedCity] = useState(null);
   const { mutateAsync: createLog } = useCreateLog();
-  const { data: topCities, refetch } = useTopCities();
+  const { refetch } = useTopCities();
 
   const handleSelectCity = async (selectedOption) => {
     setSelectedCity(selectedOption);
@@ -33,7 +33,6 @@ const useCitySelection = () => {
   return {
     selectedCity,
     handleSelectCity,
-    topCities,
   };
 };
 
