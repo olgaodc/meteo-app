@@ -30,6 +30,7 @@ module.exports.GET_TOP_CITIES = async (req, res) => {
       {
         $group: {
           _id: "$code",
+          name: { $first: "$name" },
           count: { $sum: 1 },
         },
       },
