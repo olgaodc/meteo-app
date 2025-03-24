@@ -1,13 +1,21 @@
-// import useCities from "src/hooks/use-cities";
+import SearchableSelect from "src/components/searchable-dropdown/searchable-dropdown";
+import useCitySearch from "src/hooks/use-city-search";
+import useCitySelection from "src/hooks/use-city-selection";
 
 const HomePage = () => {
-  // const { data: cities } = useCities();
+  const { handleSearch } = useCitySearch();
+  const { selectedCity, handleSelectCity, topCities } = useCitySelection();
+
+  console.log(topCities);
 
   return (
     <div>
       <div>
-        {/* {cities && cities.map((city) => <div key={city.code}>{city.name}</div>)} */}
-        HomePage
+        <SearchableSelect
+          loadOptions={handleSearch}
+          onChange={handleSelectCity}
+          selectedOption={selectedCity}
+        />
       </div>
     </div>
   );
