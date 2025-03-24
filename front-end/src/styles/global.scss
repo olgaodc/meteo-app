@@ -1,1 +1,21 @@
 @forward "./responsive";
+@forward "./colors";
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+HU:wght@100..400&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #111111;
+  background-color: #f0f0f0;
+  font-family: "Inter", sans-serif;
+}
+
+button,
+input {
+  font-family: "Inter", sans-serif;
+}
