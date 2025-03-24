@@ -1,0 +1,29 @@
+.navbarWrapper {
+  padding: 20px 0;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logoWrapper {
+      font-family: "Playwrite HU", cursive;
+      font-style: italic;
+      color: #111111;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+
+      .logoImage {
+        height: 40px;
+      }
+
+      .logoName {
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+  }
+}
