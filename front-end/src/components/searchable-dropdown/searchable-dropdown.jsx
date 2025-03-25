@@ -1,6 +1,6 @@
 import AsyncSelect from "react-select/async";
-import styles from "./styles.module.scss";
 import { customStyles } from "./consts";
+import Container from "../container/container";
 
 const SearchableSelect = ({
   defaultOptions,
@@ -9,19 +9,21 @@ const SearchableSelect = ({
   selectedOption,
 }) => {
   return (
-    <div className={styles.selectWrapper}>
-      <AsyncSelect
-        placeholder="Search city"
-        isClearable
-        default
-        defaultOptions={defaultOptions}
-        loadOptions={loadOptions}
-        onChange={onChange}
-        value={selectedOption}
-        loadingMessage={() => "Loading..."}
-        styles={customStyles}
-      />
-    </div>
+    <>
+      <Container>
+        <AsyncSelect
+          placeholder="Search city"
+          isClearable
+          default
+          defaultOptions={defaultOptions}
+          loadOptions={loadOptions}
+          onChange={onChange}
+          value={selectedOption}
+          loadingMessage={() => "Loading..."}
+          styles={customStyles}
+        />
+      </Container>
+    </>
   );
 };
 

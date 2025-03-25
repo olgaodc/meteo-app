@@ -1,4 +1,9 @@
 export const customStyles = {
+  container: (provided) => ({
+    ...provided,
+    maxWidth: "600px",
+    margin: "10px auto 0",
+  }),
   control: (provided) => ({
     ...provided,
     cursor: "pointer",
@@ -16,8 +21,9 @@ export const customStyles = {
     border: "none",
     boxShadow: "none",
   }),
-  option: (provided) => ({
+  option: (provided, state) => ({
     ...provided,
     cursor: "pointer",
+    backgroundColor: state.isSelected ? "#0066FF" : provided.backgroundColor,
   }),
 };

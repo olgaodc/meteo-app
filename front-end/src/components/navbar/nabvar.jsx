@@ -3,12 +3,13 @@ import styles from "./styles.module.scss";
 import MeteoIcon from "src/assets/meteo-icon.png";
 import { Link } from "react-router-dom";
 import routes from "src/navigation/routes";
+import { today } from "src/utils/todayDate";
 
 const Navbar = () => {
   return (
-    <div className={styles.navbarWrapper}>
+    <nav className={styles.navbarWrapper}>
       <Container>
-        <nav className={styles.navbar}>
+        <div className={styles.navbar}>
           <Link className={styles.logoWrapper} to={routes.HOME}>
             <img
               className={styles.logoImage}
@@ -17,9 +18,10 @@ const Navbar = () => {
             />
             <span className={styles.logoName}>temp.lt</span>
           </Link>
-        </nav>
+          <div className={styles.today}>{today}</div>
+        </div>
       </Container>
-    </div>
+    </nav>
   );
 };
 

@@ -12,7 +12,11 @@ body {
   margin: 0;
   color: #111111;
   background-color: #f0f0f0;
+  background-image: url(../assets//wave-haikei.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Inter", sans-serif;
+  min-width: 260px;
 }
 
 button,
