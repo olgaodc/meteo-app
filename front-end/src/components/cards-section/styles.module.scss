@@ -1,0 +1,12 @@
+.sectionWrapper {
+  .sectionTitle {
+    font-size: 30px;
+    margin: 25px 0;
+  }
+
+  .section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}

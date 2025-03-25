@@ -1,0 +1,32 @@
+.cardLink {
+  text-decoration: none;
+  color: $black-color;
+  background-color: $white-color;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: #00000026 -0.05px 1.95px 12.6px;
+  cursor: pointer;
+
+  .cardTitle {
+    font-size: 18px;
+    color: #0066ff;
+    margin: 0;
+  }
+
+  .cardInfo {
+    margin: 0;
+
+    &.temperature {
+      font-size: 56px;
+      font-weight: 600;
+    }
+  }
+  .cardList {
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+  }
+}
